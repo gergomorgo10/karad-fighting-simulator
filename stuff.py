@@ -4,3 +4,4 @@ class Game:
         self.Hp = int(hp)
         self.Speed = int(speed)
         self.Dmg = int(dmg)
+
