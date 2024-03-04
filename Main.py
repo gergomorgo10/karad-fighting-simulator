@@ -50,10 +50,36 @@ throwawaylist = []
 if gameclass == 1:
     speed = 10
     hp = 200
-    damage = random.randint(50, 80)
+    damage = 65
     throwawaylist.append(name)
     throwawaylist.append(hp)
     throwawaylist.append(speed)
     throwawaylist.append(damage)
+    a = stuff.Game(throwawaylist[0], throwawaylist[1], throwawaylist[2], throwawaylist[3])
+    characterstat.append(a)
+
+if gameclass == 2:
+    speed = 30
+    hp = 100
+    damage = 50
+    throwawaylist.append(name)
+    throwawaylist.append(hp)
+    throwawaylist.append(speed)
+    throwawaylist.append(damage)
+    a = stuff.Game(throwawaylist[0], throwawaylist[1], throwawaylist[2], throwawaylist[3])
+    characterstat.append(a)
+
+if gameclass == 3:
+    speed = 20
+    hp = 60
+    damage = 80
+    throwawaylist.append(name)
+    throwawaylist.append(hp)
+    throwawaylist.append(speed)
+    throwawaylist.append(damage)
+    a = stuff.Game(throwawaylist[0], throwawaylist[1], throwawaylist[2], throwawaylist[3])
+    characterstat.append(a)
+
+characterstat[0].Kiir()
 
 
