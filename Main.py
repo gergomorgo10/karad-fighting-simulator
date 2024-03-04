@@ -42,3 +42,18 @@ while decision2 != 1:
         while decision2 <= 0 or decision2 > 2:
             print("nope")
             decision2 = int(input("are you sure? (1 yes , 2 no)  :"))
+
+characterstat = []
+
+throwawaylist = []
+
+if gameclass == 1:
+    speed = 10
+    hp = 200
+    damage = random.randint(50, 80)
+    throwawaylist.append(name)
+    throwawaylist.append(hp)
+    throwawaylist.append(speed)
+    throwawaylist.append(damage)
+
+
