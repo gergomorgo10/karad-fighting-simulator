@@ -82,4 +82,4 @@ if gameclass == 3:
 
 characterstat[0].Kiir()
 
-
+enemy = characterstat[0].Enemygenerator()
