@@ -1,5 +1,6 @@
 import random
 import stuff
+import enemy
 
 print("Welcom to karád simulator")
 
@@ -82,4 +83,80 @@ if gameclass == 3:
 
 characterstat[0].Kiir()
 
-enemy = characterstat[0].Enemygenerator()
+Enemy = int(characterstat[0].Enemygenerator())
+
+enemystatok = []
+
+if Enemy == 1:
+    throwawaylist = []
+    name = "Mugger"
+    Hp = 80
+    Spd = 20
+    dmg = 75
+    throwawaylist.append(name)
+    throwawaylist.append(Hp)
+    throwawaylist.append(Spd)
+    throwawaylist.append(dmg)
+    a = enemy.enemystat(throwawaylist[0], throwawaylist[1], throwawaylist[2], throwawaylist[3])
+    enemystatok.append(a)
+elif Enemy == 2:
+    throwawaylist = []
+    name = "Kindergarten kid"
+    Hp = 50
+    Spd = 50
+    dmg = 40
+    throwawaylist.append(name)
+    throwawaylist.append(Hp)
+    throwawaylist.append(Spd)
+    throwawaylist.append(dmg)
+    a = enemy.enemystat(throwawaylist[0], throwawaylist[1], throwawaylist[2], throwawaylist[3])
+    enemystatok.append(a)
+elif Enemy == 3:
+    throwawaylist = []
+    name = "kid gypsy"
+    Hp = 65
+    Spd = 50
+    dmg = 45
+    throwawaylist.append(name)
+    throwawaylist.append(Hp)
+    throwawaylist.append(Spd)
+    throwawaylist.append(dmg)
+    a = enemy.enemystat(throwawaylist[0], throwawaylist[1], throwawaylist[2], throwawaylist[3])
+    enemystatok.append(a)
+elif Enemy == 4:
+    throwawaylist = []
+    name = "adult gypsy"
+    Hp = 120
+    Spd = 15
+    dmg = 50
+    throwawaylist.append(name)
+    throwawaylist.append(Hp)
+    throwawaylist.append(Spd)
+    throwawaylist.append(dmg)
+    a = enemy.enemystat(throwawaylist[0], throwawaylist[1], throwawaylist[2], throwawaylist[3])
+    enemystatok.append(a)
+elif Enemy == 5:
+    throwawaylist = []
+    name = "destroyer of worlds (D2)"
+    Hp = 66666
+    Spd = 66666
+    dmg = 66666
+    throwawaylist.append(name)
+    throwawaylist.append(Hp)
+    throwawaylist.append(Spd)
+    throwawaylist.append(dmg)
+    a = enemy.enemystat(throwawaylist[0], throwawaylist[1], throwawaylist[2], throwawaylist[3])
+    enemystatok.append(a)
+elif Enemy == 6:
+    throwawaylist = []
+    name = "banklifter"
+    Hp = 150
+    Spd = 20
+    dmg = 85
+    throwawaylist.append(name)
+    throwawaylist.append(Hp)
+    throwawaylist.append(Spd)
+    throwawaylist.append(dmg)
+    a = enemy.enemystat(throwawaylist[0], throwawaylist[1], throwawaylist[2], throwawaylist[3])
+    enemystatok.append(a)
+print(enemystatok[0].Enemykiir())
