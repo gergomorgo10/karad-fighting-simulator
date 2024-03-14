@@ -30,3 +30,10 @@ class Game:
         elif ranszam > 66666 and ranszam <= 100000:
             print("banklifter has appeared")
             return 6
+
+    def Fight(self, damage):
+        a = self.Hp
+        a = a - damage
+        print(f"you took {damage} damage.\n your hp is {a}")
+        if a <= 0:
+            print("you died")

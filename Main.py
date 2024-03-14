@@ -160,3 +160,17 @@ elif Enemy == 6:
     a = enemy.enemystat(throwawaylist[0], throwawaylist[1], throwawaylist[2], throwawaylist[3])
     enemystatok.append(a)
 print(enemystatok[0].Enemykiir())
+
+while enemystatok[0].Hp > 0 and characterstat[0].Hp > 0:
+    if enemystatok[0].Spd > characterstat[0].Speed:
+        print("enemy attacks first")
+        eattack = random.randint(enemystatok[0].Dmg - 10, enemystatok[0].Dmg + 10)
+        characterstat[0].Fight(eattack)
+        print("your turn")
+        options = int(input("what do you want to do? [1  run,   2 attack] : "))
+        if options == 1:
+            chance = random.randint(1, 100)
+            if chance > 20 and chance < 60:
+                print("sikeresen elszöktél")
+                enemystatok[0].Efight(9999999)
+
