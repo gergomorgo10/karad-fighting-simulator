@@ -25,7 +25,7 @@ class Game:
             print(f"adult gypsy has appeared\n")
             return 4
         elif ranszam == 66666:
-            print("D2 crawls into this reality")
+            print(f"D2 crawls into this reality\n")
             return 5
         elif ranszam > 66666 and ranszam <= 100000:
             print(f"banklifter has appeared\n")

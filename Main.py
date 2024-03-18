@@ -94,7 +94,7 @@ while kilep != 3:
         throwawaylist = []
         name = "Mugger"
         Hp = 80
-        Spd = 20
+        Spd = 21
         dmg = 75
         throwawaylist.append(name)
         throwawaylist.append(Hp)
@@ -154,7 +154,7 @@ while kilep != 3:
         throwawaylist = []
         name = "banklifter"
         Hp = 150
-        Spd = 20
+        Spd = 19
         dmg = 85
         throwawaylist.append(name)
         throwawaylist.append(Hp)
@@ -167,8 +167,6 @@ while kilep != 3:
     enemyhp = enemystatok[0].Hp
 
     playerhp = characterstat[0].Hp
-
-    ehp = enemyhp
 
     while enemyhp > 0 and playerhp > 0:
         if enemystatok[0].Spd > characterstat[0].Speed:
