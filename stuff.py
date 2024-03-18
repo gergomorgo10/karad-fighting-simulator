@@ -31,9 +31,18 @@ class Game:
             print("banklifter has appeared")
             return 6
 
-    def Fight(self, damage):
-        a = self.Hp
+    def Fight(self, damage, hp):
+        a = hp
+        b = self.Hp
         a = a - damage
-        print(f"you took {damage} damage.\n your hp is {a}")
         if a <= 0:
-            print("you died")
+            print(f"you took {damage} damage")
+            print("you lose")
+            return 0
+        elif damage >= b:
+            print(f"it obliterated you with the damage of {damage}")
+            print("you lose")
+            return 0
+        else:
+            print(f"you took {damage} damage.\n your hp is {a}")
+            return a
