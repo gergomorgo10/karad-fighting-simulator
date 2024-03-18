@@ -13,22 +13,22 @@ class Game:
     def Enemygenerator(self):
         ranszam = random.randint(1, 100000)
         if ranszam >= 1 and ranszam < 5000:
-            print("mugger has appeared")
+            print(f"mugger has appeared\n")
             return 1
         elif ranszam >= 5000 and ranszam < 10000:
-            print("kindergarten kid has appeared")
+            print(f"kindergarten kid has appeared\n")
             return 2
         elif ranszam >= 10000 and ranszam < 30000:
-            print("kid gypsy has appeared")
+            print(f"kid gypsy has appeared\n")
             return 3
         elif ranszam >= 30000 and ranszam < 66666:
-            print("adult gypsy has appeared")
+            print(f"adult gypsy has appeared\n")
             return 4
         elif ranszam == 66666:
             print("D2 crawls into this reality")
             return 5
         elif ranszam > 66666 and ranszam <= 100000:
-            print("banklifter has appeared")
+            print(f"banklifter has appeared\n")
             return 6
 
     def Fight(self, damage, hp):
@@ -36,13 +36,13 @@ class Game:
         b = self.Hp
         a = a - damage
         if a <= 0:
-            print(f"you took {damage} damage")
+            print(f"you took {damage} damage\n")
             print("you lose")
             return 0
         elif damage >= b:
-            print(f"it obliterated you with the damage of {damage}")
+            print(f"it obliterated you with the damage of {damage}\n")
             print("you lose")
             return 0
         else:
-            print(f"you took {damage} damage.\n your hp is {a}")
+            print(f"you took {damage} damage.\n your hp is {a}\n")
             return a

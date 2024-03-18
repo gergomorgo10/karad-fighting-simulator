@@ -83,141 +83,143 @@ if gameclass == 3:
 
 characterstat[0].Kiir()
 
-Enemy = int(characterstat[0].Enemygenerator())
+kilep = 0
 
-enemystatok = []
+while kilep != 3:
+    Enemy = int(characterstat[0].Enemygenerator())
 
-if Enemy == 1:
-    throwawaylist = []
-    name = "Mugger"
-    Hp = 80
-    Spd = 20
-    dmg = 75
-    throwawaylist.append(name)
-    throwawaylist.append(Hp)
-    throwawaylist.append(Spd)
-    throwawaylist.append(dmg)
-    a = enemy.enemystat(throwawaylist[0], throwawaylist[1], throwawaylist[2], throwawaylist[3])
-    enemystatok.append(a)
-elif Enemy == 2:
-    throwawaylist = []
-    name = "Kindergarten kid"
-    Hp = 50
-    Spd = 50
-    dmg = 40
-    throwawaylist.append(name)
-    throwawaylist.append(Hp)
-    throwawaylist.append(Spd)
-    throwawaylist.append(dmg)
-    a = enemy.enemystat(throwawaylist[0], throwawaylist[1], throwawaylist[2], throwawaylist[3])
-    enemystatok.append(a)
-elif Enemy == 3:
-    throwawaylist = []
-    name = "kid gypsy"
-    Hp = 65
-    Spd = 50
-    dmg = 45
-    throwawaylist.append(name)
-    throwawaylist.append(Hp)
-    throwawaylist.append(Spd)
-    throwawaylist.append(dmg)
-    a = enemy.enemystat(throwawaylist[0], throwawaylist[1], throwawaylist[2], throwawaylist[3])
-    enemystatok.append(a)
-elif Enemy == 4:
-    throwawaylist = []
-    name = "adult gypsy"
-    Hp = 120
-    Spd = 15
-    dmg = 50
-    throwawaylist.append(name)
-    throwawaylist.append(Hp)
-    throwawaylist.append(Spd)
-    throwawaylist.append(dmg)
-    a = enemy.enemystat(throwawaylist[0], throwawaylist[1], throwawaylist[2], throwawaylist[3])
-    enemystatok.append(a)
-elif Enemy == 5:
-    throwawaylist = []
-    name = "destroyer of worlds (D2)"
-    Hp = 66666
-    Spd = 66666
-    dmg = 66666
-    throwawaylist.append(name)
-    throwawaylist.append(Hp)
-    throwawaylist.append(Spd)
-    throwawaylist.append(dmg)
-    a = enemy.enemystat(throwawaylist[0], throwawaylist[1], throwawaylist[2], throwawaylist[3])
-    enemystatok.append(a)
-elif Enemy == 6:
-    throwawaylist = []
-    name = "banklifter"
-    Hp = 150
-    Spd = 20
-    dmg = 85
-    throwawaylist.append(name)
-    throwawaylist.append(Hp)
-    throwawaylist.append(Spd)
-    throwawaylist.append(dmg)
-    a = enemy.enemystat(throwawaylist[0], throwawaylist[1], throwawaylist[2], throwawaylist[3])
-    enemystatok.append(a)
-print(enemystatok[0].Enemykiir())
+    enemystatok = []
 
-enemyhp = enemystatok[0].Hp
+    if Enemy == 1:
+        throwawaylist = []
+        name = "Mugger"
+        Hp = 80
+        Spd = 20
+        dmg = 75
+        throwawaylist.append(name)
+        throwawaylist.append(Hp)
+        throwawaylist.append(Spd)
+        throwawaylist.append(dmg)
+        a = enemy.enemystat(throwawaylist[0], throwawaylist[1], throwawaylist[2], throwawaylist[3])
+        enemystatok.append(a)
+    elif Enemy == 2:
+        throwawaylist = []
+        name = "Kindergarten kid"
+        Hp = 50
+        Spd = 50
+        dmg = 40
+        throwawaylist.append(name)
+        throwawaylist.append(Hp)
+        throwawaylist.append(Spd)
+        throwawaylist.append(dmg)
+        a = enemy.enemystat(throwawaylist[0], throwawaylist[1], throwawaylist[2], throwawaylist[3])
+        enemystatok.append(a)
+    elif Enemy == 3:
+        throwawaylist = []
+        name = "kid gypsy"
+        Hp = 65
+        Spd = 50
+        dmg = 45
+        throwawaylist.append(name)
+        throwawaylist.append(Hp)
+        throwawaylist.append(Spd)
+        throwawaylist.append(dmg)
+        a = enemy.enemystat(throwawaylist[0], throwawaylist[1], throwawaylist[2], throwawaylist[3])
+        enemystatok.append(a)
+    elif Enemy == 4:
+        throwawaylist = []
+        name = "adult gypsy"
+        Hp = 120
+        Spd = 15
+        dmg = 50
+        throwawaylist.append(name)
+        throwawaylist.append(Hp)
+        throwawaylist.append(Spd)
+        throwawaylist.append(dmg)
+        a = enemy.enemystat(throwawaylist[0], throwawaylist[1], throwawaylist[2], throwawaylist[3])
+        enemystatok.append(a)
+    elif Enemy == 5:
+        throwawaylist = []
+        name = "destroyer of worlds (D2)"
+        Hp = 66666
+        Spd = 66666
+        dmg = 66666
+        throwawaylist.append(name)
+        throwawaylist.append(Hp)
+        throwawaylist.append(Spd)
+        throwawaylist.append(dmg)
+        a = enemy.enemystat(throwawaylist[0], throwawaylist[1], throwawaylist[2], throwawaylist[3])
+        enemystatok.append(a)
+    elif Enemy == 6:
+        throwawaylist = []
+        name = "banklifter"
+        Hp = 150
+        Spd = 20
+        dmg = 85
+        throwawaylist.append(name)
+        throwawaylist.append(Hp)
+        throwawaylist.append(Spd)
+        throwawaylist.append(dmg)
+        a = enemy.enemystat(throwawaylist[0], throwawaylist[1], throwawaylist[2], throwawaylist[3])
+        enemystatok.append(a)
+    print(enemystatok[0].Enemykiir())
 
-playerhp = characterstat[0].Hp
+    enemyhp = enemystatok[0].Hp
 
-ehp = enemyhp
+    playerhp = characterstat[0].Hp
 
-while enemyhp > 0 and playerhp > 0:
-    if enemystatok[0].Spd > characterstat[0].Speed:
-        print(f"enemy attacks\n")
-        eattack = random.randint(enemystatok[0].Dmg - 10, enemystatok[0].Dmg + 10)
-        playerhp = characterstat[0].Fight(eattack, playerhp)
-        if playerhp <= 0:
-            print(" ")
-        elif playerhp > 0:
-            print(f"your turn\n")
-            options = int(input("what do you want to do? [1  run,   2 attack] : "))
-            while options < 1 or options > 2:
-                print("you can only choose between 1 and 2")
+    ehp = enemyhp
+
+    while enemyhp > 0 and playerhp > 0:
+        if enemystatok[0].Spd > characterstat[0].Speed:
+            print(f"enemy attacks\n")
+            eattack = random.randint(enemystatok[0].Dmg - 10, enemystatok[0].Dmg + 10)
+            playerhp = characterstat[0].Fight(eattack, playerhp)
+            if playerhp <= 0:
+                print(" ")
+            elif playerhp > 0:
+                print(f"your turn\n")
                 options = int(input("what do you want to do? [1  run,   2 attack] : "))
-            if options == 1:
-                chance = random.randint(1, 100)
-                if chance > 20 and chance < 60:
-                    print(f"sikeresen elszöktél\n")
-                    enemyhp = enemystatok[0].Efight(9999999, enemyhp)
-                else:
-                    print(f"you failed to escape\n")
-            elif options == 2:
-                pattack = random.randint(characterstat[0].Dmg - 10, characterstat[0].Dmg + 10)
-                enemyhp = enemystatok[0].Efight(pattack, enemyhp)
-    elif enemystatok[0].Spd < characterstat[0].Speed:
-        if playerhp <= 0:
-            print(" ")
-        elif playerhp > 0:
-            print(f"your turn\n")
-            options = int(input("what do you want to do? [1  run,   2 attack] : "))
-            while options < 1 or options > 2:
-                print("you can only choose between 1 and 2")
+                while options < 1 or options > 2:
+                    print("you can only choose between 1 and 2")
+                    options = int(input("what do you want to do? [1  run,   2 attack] : "))
+                if options == 1:
+                    chance = random.randint(1, 100)
+                    if chance > 20 and chance < 60:
+                        print(f"sikeresen elszöktél\n")
+                        enemyhp = enemystatok[0].Efight(9999999, enemyhp)
+                    else:
+                        print(f"you failed to escape\n")
+                elif options == 2:
+                    pattack = random.randint(characterstat[0].Dmg - 10, characterstat[0].Dmg + 10)
+                    enemyhp = enemystatok[0].Efight(pattack, enemyhp)
+        elif enemystatok[0].Spd < characterstat[0].Speed:
+            if playerhp <= 0:
+                print(" ")
+            elif playerhp > 0:
+                print(f"your turn\n")
                 options = int(input("what do you want to do? [1  run,   2 attack] : "))
-            if options == 1:
-                chance = random.randint(1, 100)
-                if chance > 20 and chance < 60:
-                    print(f"sikeresen elszöktél\n")
-                    enemyhp = enemystatok[0].Efight(9999999, enemyhp)
-                else:
-                    print(f"you failed to escape\n")
-            elif options == 2:
-                pattack = random.randint(characterstat[0].Dmg - 10, characterstat[0].Dmg + 10)
-                enemyhp = enemystatok[0].Efight(pattack, enemyhp)
+                while options < 1 or options > 2:
+                    print("you can only choose between 1 and 2")
+                    options = int(input("what do you want to do? [1  run,   2 attack] : "))
+                if options == 1:
+                    chance = random.randint(1, 100)
+                    if chance > 20 and chance < 60:
+                        print(f"sikeresen elszöktél\n")
+                        enemyhp = enemystatok[0].Efight(9999999, enemyhp)
+                    else:
+                        print(f"you failed to escape\n")
+                elif options == 2:
+                    pattack = random.randint(characterstat[0].Dmg - 10, characterstat[0].Dmg + 10)
+                    enemyhp = enemystatok[0].Efight(pattack, enemyhp)
 
-                if enemyhp <= 0:
-                    print(" ")
+                    if enemyhp <= 0:
+                        print(" ")
 
-                elif enemyhp > 0:
-                    print(f"enemy attacks\n")
-                    eattack = random.randint(enemystatok[0].Dmg - 10, enemystatok[0].Dmg + 10)
-                    playerhp = characterstat[0].Fight(eattack, playerhp)
-
+                    elif enemyhp > 0:
+                        print(f"enemy attacks\n")
+                        eattack = random.randint(enemystatok[0].Dmg - 10, enemystatok[0].Dmg + 10)
+                        playerhp = characterstat[0].Fight(eattack, playerhp)
 
 
 
