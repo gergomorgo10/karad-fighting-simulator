@@ -50,7 +50,7 @@ throwawaylist = []
 
 if gameclass == 1:
     speed = 10
-    hp = 300
+    hp = 200
     damage = 65
     throwawaylist.append(name)
     throwawaylist.append(hp)
@@ -62,7 +62,7 @@ if gameclass == 1:
 if gameclass == 2:
     speed = 30
     hp = 100
-    damage = 50
+    damage = 45
     throwawaylist.append(name)
     throwawaylist.append(hp)
     throwawaylist.append(speed)
@@ -73,7 +73,7 @@ if gameclass == 2:
 if gameclass == 3:
     speed = 20
     hp = 60
-    damage = 80
+    damage = 90
     throwawaylist.append(name)
     throwawaylist.append(hp)
     throwawaylist.append(speed)
@@ -84,6 +84,8 @@ if gameclass == 3:
 characterstat[0].Kiir()
 
 kilep = 0
+
+scores = 0
 
 while kilep != 3:
     Enemy = int(characterstat[0].Enemygenerator())
@@ -184,7 +186,11 @@ while kilep != 3:
                 if options == 1:
                     chance = random.randint(1, 100)
                     if chance > 20 and chance < 60:
-                        print(f"sikeresen elszöktél\n")
+                        print(f"succesfull escape\n")
+                        print("but still, you ran away, we are taking away 5 points from your score")
+                        scaredycat = 5
+                        scores -= 5
+                        ranaway = 1
                         enemyhp = enemystatok[0].Efight(9999999, enemyhp)
                     else:
                         print(f"you failed to escape\n")
@@ -203,7 +209,11 @@ while kilep != 3:
                 if options == 1:
                     chance = random.randint(1, 100)
                     if chance > 20 and chance < 60:
-                        print(f"sikeresen elszöktél\n")
+                        print(f"succesfull escape\n")
+                        print("but still, you ran away, we are taking away 5 points from your score")
+                        scaredycat = 5
+                        scores -= 5
+                        ranaway = 1
                         enemyhp = enemystatok[0].Efight(9999999, enemyhp)
                     else:
                         print(f"you failed to escape\n")
@@ -213,11 +223,26 @@ while kilep != 3:
 
                     if enemyhp <= 0:
                         print(" ")
-
                     elif enemyhp > 0:
                         print(f"enemy attacks\n")
                         eattack = random.randint(enemystatok[0].Dmg - 10, enemystatok[0].Dmg + 10)
                         playerhp = characterstat[0].Fight(eattack, playerhp)
 
+    if ranaway == 1:
+        print(f"current score is {scores}")
+        ranaway -= 0
+    elif enemyhp <= 0:
+        print(" ")
+        scorenumber = characterstat[0].Score(Enemy)
+        scores += scorenumber
+        print(f"your score so far is {scores}")
+    elif playerhp <= 0:
+        print(" ")
+        punishmentnumber = characterstat[0].Punishment(Enemy)
+        scores -= punishmentnumber
+        print(f"because of your loss, we are taking away {punishmentnumber} score points from your score")
+        print(f"now your score is {scores}")
 
+    if scores < 0:
+        print(f"lol, in minus score? skill issue :P\n")
 

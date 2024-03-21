@@ -13,13 +13,16 @@ class enemystat:
         a = hp
         b = self.Hp
         a = a - damage
-        if a <= 0:
-            print(f"it took {damage} damage\n")
-            print("you win")
+        if damage == 9999999 and a <= 0:
+            print(" ")
             return 0
-        elif damage >= b:
+        elif damage >= b and a <= 0:
             print(f"you obliterated the enemy with the damage of {damage}\n")
-            print("you win")
+            print(f"you win\n")
+            return 0
+        elif a <= 0:
+            print(f"it took {damage} damage\n")
+            print(f"you win\n")
             return 0
         else:
             print(f"it took {damage} damage.\n its hp is {a}\n")

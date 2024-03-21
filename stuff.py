@@ -37,12 +37,37 @@ class Game:
         a = a - damage
         if a <= 0:
             print(f"you took {damage} damage\n")
-            print("you lose")
-            return 0
-        elif damage >= b:
-            print(f"it obliterated you with the damage of {damage}\n")
-            print("you lose")
+            print(f"you lose\n")
             return 0
         else:
             print(f"you took {damage} damage.\n your hp is {a}\n")
             return a
+
+    def Score(self, type):
+        if type == 1:
+            return 30
+        elif type == 2:
+            return 5
+        elif type == 3:
+            return 10
+        elif type == 4:
+            return 20
+        elif type == 5:
+            return 66666
+        else:
+            return 40
+
+    def Punishment(self, type):
+        if type == 1:
+            return 40
+        elif type == 2:
+            return 20
+        elif type == 3:
+            return 30
+        elif type == 4:
+            return 35
+        elif type == 5:
+            return 666666
+        else:
+            return 50
+
