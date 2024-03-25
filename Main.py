@@ -4,7 +4,8 @@ import enemy
 
 print(f"Welcom to karád simulator\n")
 
-print(f"to win, you need to get 100 or more score\n")
+print(f"to win, you need to get 200 or more score\n")
+print(f"death in the boss fight is permanent\n")
 
 reset = 0
 
@@ -243,6 +244,7 @@ while reset != 1:
             scorenumber = characterstat[0].Score(Enemy)
             scores += scorenumber
             print(f"your score so far is {scores}")
+            characterstat[0].gaining(Enemy)
         elif playerhp <= 0:
             print(" ")
             punishmentnumber = characterstat[0].Punishment(Enemy)
@@ -254,9 +256,89 @@ while reset != 1:
         if scores < 0:
             print(f"lol, in minus score? skill issue :P\n")
 
-        elif scores >= 100:
-            print("you won, good job")
+
+
+        elif scores >= 200:
             kilep += 3
+
+    enemystatok = []
+
+
+    throwawaylist = []
+    name = "gypsy family"
+    Hp = 350
+    Spd = 11
+    dmg = 95
+    throwawaylist.append(name)
+    throwawaylist.append(Hp)
+    throwawaylist.append(Spd)
+    throwawaylist.append(dmg)
+    a = enemy.enemystat(throwawaylist[0], throwawaylist[1], throwawaylist[2], throwawaylist[3])
+    enemystatok.append(a)
+    print(enemystatok[0].Enemykiir())
+
+    enemyhp = enemystatok[0].Hp
+
+    playerhp = characterstat[0].Hp
+
+    defeating = 0
+
+    losing = 0
+
+    while defeating != 1:
+        while enemyhp > 0 and playerhp > 0:
+            if enemystatok[0].Spd > characterstat[0].Speed:
+                print(f"enemy attacks\n")
+                eattack = random.randint(enemystatok[0].Dmg - 10, enemystatok[0].Dmg + 10)
+                playerhp = characterstat[0].Fight(eattack, playerhp)
+                if playerhp <= 0:
+                    print(" ")
+                elif playerhp > 0:
+                    print(f"your turn\n")
+                    options = int(input("what do you want to do? [1  run,   2 attack] : "))
+                    while options < 1 or options > 2:
+                        print("you can only choose between 1 and 2")
+                        options = int(input("what do you want to do? [1  run,   2 attack] : "))
+                    if options == 1:
+                            print(f"you cant run =)\n")
+                    elif options == 2:
+                        pattack = random.randint(characterstat[0].Dmg - 10, characterstat[0].Dmg + 10)
+                        enemyhp = enemystatok[0].Efight(pattack, enemyhp)
+            elif enemystatok[0].Spd < characterstat[0].Speed:
+                if playerhp <= 0:
+                    print(" ")
+                elif playerhp > 0:
+                    print(f"your turn\n")
+                    options = int(input("what do you want to do? [1  run,   2 attack] : "))
+                    while options < 1 or options > 2:
+                        print("you can only choose between 1 and 2")
+                        options = int(input("what do you want to do? [1  run,   2 attack] : "))
+                    if options == 1:
+                        print(f"you cant run =)\n")
+                    elif options == 2:
+                        pattack = random.randint(characterstat[0].Dmg - 10, characterstat[0].Dmg + 10)
+                        enemyhp = enemystatok[0].Efight(pattack, enemyhp)
+                        if enemyhp <= 0:
+                            print(" ")
+                        elif enemyhp > 0:
+                            print(f"enemy attacks\n")
+                            eattack = random.randint(enemystatok[0].Dmg - 10, enemystatok[0].Dmg + 10)
+                            playerhp = characterstat[0].Fight(eattack, playerhp)
+
+        if enemyhp <= 0:
+            defeating += 1
+        elif playerhp <= 0:
+            print("weak")
+            defeating += 1
+            losing += 1
+
+
+    if losing == 0:
+        print("you won, good job")
+
+    else:
+        print(" ")
+
 
     reset = int(input("do you want to start again? (1 no   2 yes) : "))
     while reset < 1 or reset > 2:

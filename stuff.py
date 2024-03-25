@@ -71,3 +71,21 @@ class Game:
         else:
             return 50
 
+    def gaining(self, type):
+        if type == 3:
+            print(f"you gained 15 hp, 5 dmg\n")
+            self.Hp += 15
+            self.Dmg += 5
+        elif type == 4:
+            print(f"you gained 20 hp, 10 dmg\n")
+            self.Hp += 20
+            self.Dmg += 10
+        elif type == 5:
+            print(f"you have gained its divine power\n")
+            self.Hp = 66666666
+            self.Dmg = 6666666666
+        elif type == 6:
+            print(f"you gained 35 hp, 25 dmg\n")
+            self.Hp += 35
+            self.Dmg += 25
+
